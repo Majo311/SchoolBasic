@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Student.h"
 #include "School.h"
 
