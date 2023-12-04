@@ -6,6 +6,13 @@ Person::Person()
 {
 }
 
+Person::Person(std::string name, int age, std::wstring interest)
+{
+	_name = name;
+	_age = age;
+	_interest = interest;
+}
+
 void Person::init(const std::string& name, const int& age)
 {
 	_name = name;

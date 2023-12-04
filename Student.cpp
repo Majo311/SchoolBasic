@@ -8,6 +8,11 @@ Student::Student()
 
 }
 
+Student::Student(std::string name, int age, std::string interest)
+{
+	init(name, age, 0);
+}
+
 void Student::printInfo()
 {
 	std::cout << "Name: " << Person::getName() << " Age: " << Person::getAge() << " Classroom number :" << classroomNumber << std::endl;

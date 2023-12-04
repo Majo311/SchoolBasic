@@ -11,6 +11,7 @@ private:
 	int _age = 0;
 public:
 	Person();
+	Person(std::string name, int age, std::wstring interest = NULL);
 	~Person();
 
 	void init(const std::string& name, const int& age);
