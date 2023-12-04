@@ -1,20 +1,31 @@
-// SchoolBasic.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
-int main()
+#include "Student.h"
+#include "School.h"
+
+int main(int argc, char** argv)
 {
-    std::cout << "Hello World!\n";
+	School school;
+	{
+		Student* s = new Student();
+		s->init("Jozko Mrkvicka", 18, 1);
+		std::cout << "Age of Jozko is : " << s->getAge() << std::endl;
+	}
+
+	Student student2;
+	student2.init("Palko Mrkvicka", 19, 2);
+	school.addStudent(student2);
+	school.assignStudentToNewClassroom(student2, 5);
+
+	Student* palkoStudentPtr = school.getStudent(0);
+	palkoStudentPtr->printInfo();
+
+	Student student3;
+	student3.init("Janka Mrkvickova", 20, 3);
+	school.addStudent(student3);
+	school.assignStudentToNewClassroom(student3, 4);
+	palkoStudentPtr->printInfo();
+
+	system("pause");
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
