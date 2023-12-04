@@ -1,5 +1,18 @@
 #include "School.h"
+#include <iostream>
 
+
+bool School::isStudentAllreadyAssigned( Student student)
+{
+	for (auto s : _students)
+	{
+		if (s.getName() == student.getName())
+		{
+			return true;
+		}
+	}
+	return false;
+}
 
 School::School()
 {
@@ -22,9 +35,13 @@ void School::addStudentToCourse(Student student)
 	}
 }
 
-void School::addStudent(Student student)
+void School::addStudent(const Student& student)
 {
+	if(!isStudentAllreadyAssigned(student))
 	_students.push_back(student);
+	else
+		std::cout <<"Student is allready added" << std::endl;
+
 }
 
 Student* School::getStudent(int index)

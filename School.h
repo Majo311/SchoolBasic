@@ -9,6 +9,7 @@ class School
 private:
 	std::vector<Course> _courses;
 	std::list<Student> _students;
+    bool isStudentAllreadyAssigned( Student student);
 public:
 	School();
 	~School();
@@ -17,7 +18,7 @@ public:
 
 	void addStudentToCourse(Student student);
 
-	void addStudent(Student student);
+	void addStudent(const Student &student);
 
 	Student* getStudent(int index);
 };
