@@ -12,7 +12,14 @@ void School::assignStudentToNewClassroom(Student student, int newClassroomNumber
 
 void School::addStudentToCourse(Student student)
 {
-	// your implementation
+	for(Course course : _courses)
+	{
+		if (course.IsCourseSuitableForStudent(student.getInterest()))
+		{
+			course.AssigneToCourse(student);
+			break;
+		}
+	}
 }
 
 void School::addStudent(Student student)

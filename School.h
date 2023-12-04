@@ -7,7 +7,7 @@
 class School
 {
 private:
-	std::vector<Course*> _courses;
+	std::vector<Course> _courses;
 	std::list<Student> _students;
 public:
 	School();

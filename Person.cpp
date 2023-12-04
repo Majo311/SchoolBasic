@@ -24,11 +24,12 @@ int Person::getAge()
 
 void Person::addInterestToPerson(const std::wstring& interest)
 {
+	_interest = interest;
 }
 
-std::map<std::wstring, bool> Person::getInterests()
+std::wstring Person::getInterest()
 {
-	return std::map<std::wstring, bool>();
+	return _interest;
 }
 
 void Person::printInfo()

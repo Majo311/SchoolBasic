@@ -6,7 +6,7 @@ class Person
 {
 
 private:
-	std::map<std::wstring, bool> _interests;
+	std::wstring _interest;
 	std::string _name;
 	int _age = 0;
 public:
@@ -20,7 +20,7 @@ public:
 
 	void addInterestToPerson(const std::wstring& interest);
 
-	std::map<std::wstring, bool> getInterests();
+	std::wstring getInterest();
 
 	virtual void printInfo();
 };
