@@ -8,12 +8,12 @@ class FileReader
 {
 private:
 	std::vector<std::string>_allLines;
-	void GetAllLines(std::wstring file);
+	void GetAllLines(std::string file);
 	Person GetPersonFromLine(std::string line);
 	vector<string> split(const string& str, const string& delim);
 public :
 	FileReader();
-	std::list<Person> GetPersonsFromFile(std::wstring file);
+	std::list<Person> GetPersonsFromFile(std::string file);
 
 
 	~FileReader();

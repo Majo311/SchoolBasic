@@ -6,12 +6,12 @@ Course::Course()
 
 }
 
-std::wstring Course::GetName()
+std::string Course::GetName()
 {
 	return _name;
 }
 
-bool Course::IsCourseSuitableForStudent(std::wstring students_interest)
+bool Course::IsCourseSuitableForStudent(std::string students_interest)
 {
 	for (const auto& [key, value] : interestTable)
 	{

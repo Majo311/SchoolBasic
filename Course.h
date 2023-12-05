@@ -7,13 +7,13 @@
 class Course
 {
 private:
-	std::wstring _name;
-	std::map<std::wstring, bool>interestTable;
+	std::string _name;
+	std::map<std::string, bool>interestTable;
 	std::vector<Student>assignedStudents;
 public:
 	Course();
-	std::wstring GetName();
-	bool IsCourseSuitableForStudent(std::wstring students_interest);
+	std::string GetName();
+	bool IsCourseSuitableForStudent(std::string students_interest);
 	void AssigneToCourse(Student student);
 	~Course();
 

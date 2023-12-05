@@ -23,7 +23,7 @@ vector<string> FileReader::split(const string& str, const string& delim)
     while (pos < str.length() && prev < str.length());
     return tokens;
 }
-void FileReader::GetAllLines(std::wstring _file)
+void FileReader::GetAllLines(std::string _file)
 {
     std::fstream file(_file);
     std::string line;
@@ -52,7 +52,7 @@ Person FileReader::GetPersonFromLine(std::string line)
         }
 }
 
-std::list<Person> FileReader::GetPersonsFromFile(std::wstring file)
+std::list<Person> FileReader::GetPersonsFromFile(std::string file)
 {
     std::list<Person> result;
     GetAllLines(file);

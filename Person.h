@@ -6,12 +6,12 @@ class Person
 {
 
 private:
-	std::wstring _interest;
+	std::string _interest;
 	std::string _name;
 	int _age = 0;
 public:
 	Person();
-	Person(std::string name, int age, std::wstring interest = NULL);
+	Person(std::string name, int age, std::string interest = NULL);
 	~Person();
 
 	void init(const std::string& name, const int& age);
@@ -19,9 +19,9 @@ public:
 	std::string getName();
 	int getAge();
 
-	void addInterestToPerson(const std::wstring& interest);
+	void addInterestToPerson(const std::string& interest);
 
-	std::wstring getInterest();
+	std::string getInterest();
 
 	virtual void printInfo();
 };

@@ -6,7 +6,7 @@ Person::Person()
 {
 }
 
-Person::Person(std::string name, int age, std::wstring interest)
+Person::Person(std::string name, int age, std::string interest)
 {
 	_name = name;
 	_age = age;
@@ -29,12 +29,12 @@ int Person::getAge()
 	return _age;
 }
 
-void Person::addInterestToPerson(const std::wstring& interest)
+void Person::addInterestToPerson(const std::string& interest)
 {
 	_interest = interest;
 }
 
-std::wstring Person::getInterest()
+std::string Person::getInterest()
 {
 	return _interest;
 }
