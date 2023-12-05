@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Student.h"
 #include "School.h"
+#include "FileReader.h"
 
 int main(int argc, char** argv)
 {
@@ -24,6 +25,9 @@ int main(int argc, char** argv)
 	school.addStudent(student3);
 	school.assignStudentToNewClassroom(student3, 4);
 	palkoStudentPtr->printInfo();
+
+	FileReader fileReader;
+	fileReader.GetPersonsFromFile("Res/dataset.txt");
 
 	system("pause");
 	return 0;

@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include "Teacher.h"
+#include <filesystem>
 
 FileReader::FileReader()
 {
@@ -25,8 +26,14 @@ vector<string> FileReader::split(const string& str, const string& delim)
 }
 void FileReader::GetAllLines(std::string _file)
 {
+    if (!std::filesystem::exists(_file))
+    {
+        cout << "File doesn't exist!" << endl;
+        return;
+    }
     std::fstream file(_file);
     std::string line;
+    _allLines.clear();
     while (std::getline(file,line))
     {
         _allLines.push_back(line);
