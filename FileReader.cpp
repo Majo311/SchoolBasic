@@ -42,21 +42,22 @@ void FileReader::GetAllLines(std::string _file)
 Person FileReader::GetPersonFromLine(std::string line)
 {
     std::vector<string>personInfo =split(line, " ");
-    if (personInfo[2].compare("student"))
+    if (personInfo[2]=="student")
     {
-         Student s(personInfo[0], std::stoi(personInfo[1]), personInfo[3]);
+        Student s;
+        if(personInfo.size()>3)
+          s=Student(personInfo[0], std::stoi(personInfo[1]), personInfo[3]);
+        else
+          s= Student(personInfo[0], std::stoi(personInfo[1]));
+        s.SetType(personInfo[2]);
          return s;
     }
-    else 
-        if (personInfo[2].compare("teacher"))
-        {
-            Teacher t(personInfo[0], std::stoi(personInfo[1]));
-            return t;
-        }
-        else
-        {
-            //bed data in source file
-        }
+    else
+    {
+        Teacher t(personInfo[0], std::stoi(personInfo[1]));
+        t.SetType(personInfo[2]);
+        return t;
+    }
 }
 
 std::list<Person> FileReader::GetPersonsFromFile(std::string file)

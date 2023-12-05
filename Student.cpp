@@ -8,9 +8,15 @@ Student::Student()
 
 }
 
+Student::Student(std::string name, int age)
+{
+	init(name, age, 0);
+}
+
 Student::Student(std::string name, int age, std::string interest)
 {
 	init(name, age, 0);
+	Person::addInterestToPerson(interest);
 }
 
 void Student::printInfo()

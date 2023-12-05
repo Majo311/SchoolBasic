@@ -39,6 +39,16 @@ std::string Person::getInterest()
 	return _interest;
 }
 
+void Person::SetType(std::string typeX)
+{
+	type = typeX;
+}
+
+std::string Person::GetType()
+{
+	return type;
+}
+
 void Person::printInfo()
 {
 	std::cout << "Name: " << _name << " Age: " << _age << std::endl;

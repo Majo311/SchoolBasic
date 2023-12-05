@@ -9,6 +9,7 @@ private:
 	std::string _interest;
 	std::string _name;
 	int _age = 0;
+	std::string type;
 public:
 	Person();
 	Person(std::string name, int age, std::string interest = NULL);
@@ -22,6 +23,9 @@ public:
 	void addInterestToPerson(const std::string& interest);
 
 	std::string getInterest();
+
+	void SetType(std::string);
+	std::string GetType();
 
 	virtual void printInfo();
 };

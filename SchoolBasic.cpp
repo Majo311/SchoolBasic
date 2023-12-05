@@ -2,6 +2,7 @@
 #include "Student.h"
 #include "School.h"
 #include "FileReader.h"
+#include "Teacher.h"
 
 int main(int argc, char** argv)
 {
@@ -27,7 +28,11 @@ int main(int argc, char** argv)
 	palkoStudentPtr->printInfo();
 
 	FileReader fileReader;
-	fileReader.GetPersonsFromFile("Res/dataset.txt");
+	for (Person p : fileReader.GetPersonsFromFile("dataset.txt"))
+	{
+		Teacher* pChild = (Teacher*)&p;
+		std::cout << "Name: " <<p.getName() << " Age: " << p.getAge() << " Type :" << p.GetType() << " Interest : "<<p.getInterest()<<std::endl;
+	}
 
 	system("pause");
 	return 0;

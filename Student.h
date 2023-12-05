@@ -4,10 +4,11 @@
 class Student :public Person
 {
 private:
-	int classroomNumber;//	Person();
+	int classroomNumber;
 public:
 	Student();
-	Student(std::string name, int age, std::string interest = NULL);
+	Student(std::string name, int age);
+	Student(std::string name, int age, std::string interest);
 	~Student();
 
 	void init(const std::string& name, const int& age, const int& ClassroomNumber);
