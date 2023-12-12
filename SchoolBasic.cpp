@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 		s->init("Jozko Mrkvicka", 18, 1);
 		std::cout << "Age of Jozko is : " << s->getAge() << std::endl;
 	}
-
+	
 	Student student2;
 	student2.init("Palko Mrkvicka", 19, 2);
 	school.addStudent(student2);
@@ -34,5 +34,6 @@ int main(int argc, char** argv)
 	}
 
 	system("pause");
+	delete(palkoStudentPtr);
 	return 0;
 }
