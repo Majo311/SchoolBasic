@@ -30,7 +30,6 @@ int main(int argc, char** argv)
 	FileReader fileReader;
 	for (Person p : fileReader.GetPersonsFromFile("dataset.txt"))
 	{
-		Teacher* pChild = (Teacher*)&p;
 		std::cout << "Name: " <<p.getName() << " Age: " << p.getAge() << " Type :" << p.GetType() << " Interest : "<<p.getInterest()<<std::endl;
 	}
 
