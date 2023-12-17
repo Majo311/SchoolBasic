@@ -3,6 +3,17 @@
 
 Course::Course()
 {
+	
+}
+
+Course::Course(std::string courseName)
+{
+	_name = courseName;
+}
+
+Course::Course(std::string courseName, std::vector<std::string> appropiateInterests)
+{
+	_name = courseName;
 
 }
 

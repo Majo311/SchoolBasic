@@ -18,7 +18,12 @@ School::School()
 {
 }
 
-void School::assignStudentToNewClassroom(Student student, int newClassroomNumber)
+void School::CreateCourse(std::string nameOfCourse)
+{
+	Course newCourse(nameOfCourse);
+}
+
+void School::assignStudentToNewClassroom(Student &student, int newClassroomNumber)
 {
 	student.setClassRooomNumber(newClassroomNumber);
 }

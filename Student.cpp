@@ -30,7 +30,7 @@ void Student::init(const std::string& name, const int& age, const int& Classroom
 	Person::init(name, age);
 	classroomNumber = ClassroomNumber;
 }
-void Student::setClassRooomNumber(int _classRoomNumber)
+void Student::setClassRooomNumber(int &_classRoomNumber)
 {
 	classroomNumber = _classRoomNumber;
 }

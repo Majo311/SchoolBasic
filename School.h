@@ -13,8 +13,9 @@ private:
 public:
 	School();
 	~School();
-
-	void assignStudentToNewClassroom(Student student, int newClassroomNumber);
+	
+	void CreateCourse(std::string nameOfCourse);
+	void assignStudentToNewClassroom(Student &student, int newClassroomNumber);
 
 	void addStudentToCourse(Student student);
 
